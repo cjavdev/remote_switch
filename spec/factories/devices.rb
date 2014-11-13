@@ -11,8 +11,7 @@
 
 FactoryGirl.define do
   factory :device do
-    user nil
-name "MyString"
+    user
+    sequence(:name) { |x| "device #{ x }" }
   end
-
 end

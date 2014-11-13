@@ -1,1 +1,7 @@
 <h2>Welcome, <%= current_user.email %></h2>
+
+<h1>Devices</h1>
+
+<ul class="devices">
+  <%= render current_user.devices %>
+</ul>

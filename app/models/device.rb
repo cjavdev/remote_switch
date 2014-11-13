@@ -10,5 +10,8 @@
 #
 
 class Device < ActiveRecord::Base
+  validates :user, :name, presence: true
+  validates :name, uniqueness: { scope: :user }
+
   belongs_to :user
 end
