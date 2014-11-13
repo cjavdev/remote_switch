@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
-  get 'static_pages/root'
+  get 'devices/index'
 
   root to: 'static_pages#root', via: :get
   resources :users, only: [:new, :create]
-  resource :session, only: [:new, :create]
+  resource :session, only: [:new, :create, :destroy]
+  resources :devices, only: [:index]
 end

@@ -18,7 +18,7 @@ module Authable
   end
 
   def sign_out!
-    user.reset_session_token!
+    current_user.reset_session_token!
     session[:token] = nil
   end
 
